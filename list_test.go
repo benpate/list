@@ -60,3 +60,22 @@ func TestLast(t *testing.T) {
 	assert.Equal(t, "", Last("Hello ", " "))
 
 }
+
+func TestSplit(t *testing.T) {
+
+	{
+		a, b := Split("one,two,three", ",")
+		assert.Equal(t, "one", a)
+		assert.Equal(t, "two,three", b)
+	}
+}
+
+func TestAt(t *testing.T) {
+
+	{
+		assert.Equal(t, "one", At("one,two,three", ",", 0))
+		assert.Equal(t, "two", At("one,two,three", ",", 1))
+		assert.Equal(t, "three", At("one,two,three", ",", 2))
+		assert.Equal(t, "", At("one,two,three", ",", 3))
+	}
+}
