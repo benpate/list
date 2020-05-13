@@ -12,4 +12,4 @@ This library doesn't do anything earth-shattering, but it DOES replicate a numbe
 
 ## Pull Requests Welcome
 
-This library is a work in progress, and will benefit from your experience reports, use cases, and contributions.  If you have an idea for making Rosetta better, send in a pull request.  We're all in this together.
+This library is a work in progress, and will benefit from your experience reports, use cases, and contributions.  If you have an idea for making Rosetta better, send in a pull request.  We're all in this together!
