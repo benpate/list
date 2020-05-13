@@ -1,4 +1,4 @@
-package listutil
+package list
 
 import (
 	"testing"
