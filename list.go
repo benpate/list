@@ -11,7 +11,7 @@ func First(value string, delimiter string) string {
 		return value
 	}
 
-	return value[:index-1]
+	return value[:index]
 }
 
 // Rest returns any values in the string-based-list AFTER the first item
