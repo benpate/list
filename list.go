@@ -34,5 +34,5 @@ func Last(value string, delimiter string) string {
 		return value
 	}
 
-	return value[:index-1]
+	return value[index+1:]
 }
