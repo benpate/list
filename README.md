@@ -4,7 +4,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/benpate/list?style=flat-square)](https://goreportcard.com/report/github.com/benpate/list)
 [![Build Status](http://img.shields.io/travis/benpate/list.svg?style=flat-square)](https://travis-ci.org/benpate/list)
 [![Codecov](https://img.shields.io/codecov/c/github/benpate/list.svg?style=flat-square)](https://codecov.io/gh/benpate/list)
-
+![Version](https://img.shields.io/github/v/release/benpate/list?include_prereleases&style=flat-square&color=brightgreen)
 
 ## Simple List-Manipulation Utilities for Go
 
