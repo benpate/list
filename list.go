@@ -2,8 +2,8 @@ package list
 
 import "strings"
 
-// First returns the FIRST item in a string-based-list
-func First(value string, delimiter string) string {
+// Head returns the FIRST item in a string-based-list
+func Head(value string, delimiter string) string {
 
 	index := strings.Index(value, delimiter)
 
@@ -14,8 +14,8 @@ func First(value string, delimiter string) string {
 	return value[:index]
 }
 
-// Rest returns any values in the string-based-list AFTER the first item
-func Rest(value string, delimiter string) string {
+// Tail returns any values in the string-based-list AFTER the first item
+func Tail(value string, delimiter string) string {
 	index := strings.Index(value, delimiter)
 
 	if index == -1 {
@@ -54,14 +54,14 @@ func Split(value string, delimiter string) (string, string) {
 func At(value string, delimiter string, index int) string {
 
 	if index == 0 {
-		return First(value, delimiter)
+		return Head(value, delimiter)
 	}
 
-	rest := Rest(value, delimiter)
+	tail := Tail(value, delimiter)
 
-	if rest == "" {
+	if tail == "" {
 		return ""
 	}
 
-	return At(rest, delimiter, index-1)
+	return At(tail, delimiter, index-1)
 }

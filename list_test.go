@@ -6,32 +6,32 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestFirst(t *testing.T) {
+func TestHead(t *testing.T) {
 
-	assert.Equal(t, "Hello", First("Hello There", " "))
+	assert.Equal(t, "Hello", Head("Hello There", " "))
 
-	assert.Equal(t, "", First(" Hello", " "))
+	assert.Equal(t, "", Head(" Hello", " "))
 
-	assert.Equal(t, "Hello", First("Hello ", " "))
+	assert.Equal(t, "Hello", Head("Hello ", " "))
 
-	assert.Equal(t, "Hello", First("Hello", " "))
+	assert.Equal(t, "Hello", Head("Hello", " "))
 
-	assert.Equal(t, "This is a very long string but still not a list.", First("This is a very long string but still not a list.", ","))
+	assert.Equal(t, "This is a very long string but still not a list.", Head("This is a very long string but still not a list.", ","))
 
-	assert.Equal(t, "One,Two,Three", First("One,Two,Three", " "))
+	assert.Equal(t, "One,Two,Three", Head("One,Two,Three", " "))
 }
 
-func TestRest(t *testing.T) {
+func TestTail(t *testing.T) {
 
-	assert.Equal(t, "There", Rest("Hello There", " "))
+	assert.Equal(t, "There", Tail("Hello There", " "))
 
-	assert.Equal(t, "Bananas,Pears", Rest("Apples,Bananas,Pears", ","))
+	assert.Equal(t, "Bananas,Pears", Tail("Apples,Bananas,Pears", ","))
 
-	assert.Equal(t, "", Rest("One,Two,Three", " "))
+	assert.Equal(t, "", Tail("One,Two,Three", " "))
 
-	assert.Equal(t, "Hello", Rest(" Hello", " "))
+	assert.Equal(t, "Hello", Tail(" Hello", " "))
 
-	assert.Equal(t, "", Rest("Hello ", " "))
+	assert.Equal(t, "", Tail("Hello ", " "))
 
 }
 
@@ -67,6 +67,12 @@ func TestSplit(t *testing.T) {
 		a, b := Split("one,two,three", ",")
 		assert.Equal(t, "one", a)
 		assert.Equal(t, "two,three", b)
+	}
+
+	{
+		a, b := Split("one,two,three", "!")
+		assert.Equal(t, "one,two,three", a)
+		assert.Equal(t, "", b)
 	}
 }
 
