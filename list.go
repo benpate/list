@@ -25,6 +25,18 @@ func Tail(value string, delimiter string) string {
 	return value[index+1:]
 }
 
+// RemoveLast returns the full list, with the last element removed.
+func RemoveLast(value string, delimiter string) string {
+
+	index := strings.LastIndex(value, delimiter)
+
+	if index == -1 {
+		return ""
+	}
+
+	return value[:index]
+}
+
 // Last returns the LAST item in a string-based-list
 func Last(value string, delimiter string) string {
 

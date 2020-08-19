@@ -61,6 +61,32 @@ func TestLast(t *testing.T) {
 
 }
 
+func TestRemoveLast(t *testing.T) {
+
+	assert.Equal(t, "Hello There", RemoveLast("Hello There Dude", " "))
+
+	assert.Equal(t, "", RemoveLast(" Hello", " "))
+
+	assert.Equal(t, "Hello", RemoveLast("Hello ", " "))
+
+	assert.Equal(t, "", RemoveLast("Hello", " "))
+
+	assert.Equal(t, "", RemoveLast("This is a very long string but still not a list.", ","))
+
+	assert.Equal(t, "", RemoveLast("One,Two,Three", " "))
+
+	assert.Equal(t, "Hello", RemoveLast("Hello There", " "))
+
+	assert.Equal(t, "Apples,Bananas", RemoveLast("Apples,Bananas,Pears", ","))
+
+	assert.Equal(t, "", RemoveLast("One,Two,Three", " "))
+
+	assert.Equal(t, "", RemoveLast(" Hello", " "))
+
+	assert.Equal(t, "Hello", RemoveLast("Hello ", " "))
+
+}
+
 func TestSplit(t *testing.T) {
 
 	{
