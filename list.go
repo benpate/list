@@ -77,3 +77,23 @@ func At(value string, delimiter string, index int) string {
 
 	return At(tail, delimiter, index-1)
 }
+
+// PushHead adds a new item to the beginning of the list
+func PushHead(value string, newValue string, delimiter string) string {
+
+	if len(value) == 0 {
+		return newValue
+	}
+
+	return newValue + delimiter + value
+}
+
+// PushTail adds a new item to the end of the list
+func PushTail(value string, newValue string, delimiter string) string {
+
+	if len(value) == 0 {
+		return newValue
+	}
+
+	return value + delimiter + newValue
+}
