@@ -62,6 +62,19 @@ func Split(value string, delimiter string) (string, string) {
 
 }
 
+// SplitTail behaves like Split, but with the TAIL instead of the HEAD.  It returns the REST element and the LAST element in one function call.
+func SplitTail(value string, delimiter string) (string, string) {
+
+	index := strings.LastIndex(value, delimiter)
+
+	if index == -1 {
+		return value, ""
+	}
+
+	return value[:index], value[index+1:]
+
+}
+
 // At returns the list vaue at a particular index
 func At(value string, delimiter string, index int) string {
 

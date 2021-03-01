@@ -102,6 +102,21 @@ func TestSplit(t *testing.T) {
 	}
 }
 
+func TestSplitTail(t *testing.T) {
+
+	{
+		a, b := SplitTail("one,two,three", ",")
+		assert.Equal(t, "one,two", a)
+		assert.Equal(t, "three", b)
+	}
+
+	{
+		a, b := SplitTail("one,two,three", "!")
+		assert.Equal(t, "one,two,three", a)
+		assert.Equal(t, "", b)
+	}
+}
+
 func TestAt(t *testing.T) {
 
 	{
